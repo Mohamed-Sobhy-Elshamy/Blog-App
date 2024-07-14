@@ -1,0 +1,237 @@
+/* تنسيق الجدول */
+.table-container {
+    display: flex;
+    overflow: hidden;
+    height: calc(100vh - 130px);
+}
+
+    .table-wrapper {
+        flex: 10;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+        background-color: #f5f5f5;
+        overflow-y: scroll;
+    }
+    
+    .table-title {
+        font-size: 24px;
+        margin-bottom: 15px;
+        color: var(--primary-color);
+        padding: 5px;
+        border-bottom: 3px solid var(--dark-color);
+        width: max-content;
+    }
+    
+    .table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px;
+        background-color: #fff;
+        border-radius: 10px;
+        text-align: left;
+    }
+
+    .table th, .table td {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .table .same-bg {
+        background-color: var(--dark-color);
+        border-radius: 100px;
+        color: var(--white-color);
+    }
+
+    .table tr:nth-child(even) {
+        background-color: rgb(195, 194, 194);
+    }
+
+    .table tr:nth-child(even):hover {
+        background-color: var(--gray-color);
+    }
+    
+    /* تصميم الصورة واسم المستخدم */
+    .table-image {
+        display: flex;
+        align-items: center;
+    }
+    
+    .table-user-image {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+    
+    .table-username {
+        font-size: 17px;
+        font-weight: bold;
+        margin-left: 8px;
+    }
+    
+    /* تصميم الأزرار */
+    
+    .table-btn-group {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .table-btn-group button {
+        padding: 5px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin: 0 5px;
+        font-size: 17px;
+        transition: background-color 0.3s, color 0.3s;
+    }
+    
+    .table-btn-group button a {
+        text-decoration: none;
+        color: var(--white-color);
+    }
+    
+    .table-btn-group button:first-child {
+        background-color: #0056b3;
+        color: #fff;
+    }
+    
+    .table-btn-group button:first-child:hover {
+        background-color: var(--blue-color);
+    }
+    
+    .table-btn-group button:last-child {
+        background-color: var(--red-color);
+        color: #fff;
+    }
+    
+    .table-btn-group button:last-child:hover {
+        background-color: #b02a37;
+    }
+
+    .email {
+        font-size: 19px;
+        font-weight: 500;
+    }
+
+/* Media Query  */
+
+@media (max-width: 720px) {
+
+    .table-wrapper {
+        padding: 15px;
+    }
+
+    .table-btn-group {
+        flex-wrap: wrap;
+    }
+
+    .table-btn-group button {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    th, td {
+        padding: 5px;
+    }
+
+    .table-image {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+@media (max-width: 520px) {
+    .table-container {
+        flex-direction: column;
+        height: auto;
+    }
+    
+    .table-wrapper {
+        flex: none;
+        border: none;
+        box-shadow: none;
+        padding: 10px;
+        border-radius: 0;
+        overflow-y: visible;
+    }
+    
+    .table-title {
+        margin-bottom: 10px;
+        padding: 0;
+        border: none;
+    }
+    
+    .table {
+        margin-top: 0;
+        border-radius: 0;
+    }
+    
+    .table th, .table td {
+        padding: 8px;
+        font-size: 14px;
+    }
+    
+    .table .same-bg {
+        border-radius: 0;
+    }
+    
+    .table tr:nth-child(even), .table tr:nth-child(odd) {
+        background-color: transparent;
+    }
+    
+    .table tr:nth-child(even):hover, .table tr:nth-child(odd):hover {
+        background-color: transparent;
+    }
+    
+    .table-image {
+        margin-bottom: 8px;
+    }
+    
+    .table-user-image {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .table-username {
+        font-size: 15px;
+        margin-left: 5px;
+    }
+    
+    .table-btn-group {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .table-btn-group button {
+        padding: 3px 8px;
+        font-size: 14px;
+        margin: 3px 0;
+    }
+    
+    .table-btn-group button:first-child {
+        background-color: var(--primary-color);
+    }
+    
+    .table-btn-group button:first-child:hover {
+        background-color: var(--primary-color);
+    }
+    
+    .table-btn-group button:last-child {
+        background-color: var(--red-color);
+    }
+    
+    .table-btn-group button:last-child:hover {
+        background-color: var(--red-color);
+    }
+    
+    .email {
+        font-size: 16px;
+    }
+}
+

@@ -1,0 +1,207 @@
+.admin-dashboard {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    min-height: calc(100vh - 130px);
+}
+
+/* Admin Side bar  */
+.admin-sidebar {
+    flex: 2;
+    border-right: 6px solid var(--gray-color);
+    padding: 20px;
+    background: linear-gradient(to right, #ccc, #999, #666);
+}
+
+.admin-sidebar-title {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 35px;
+    color: var(--primary-color);
+    display: block;
+}
+
+.admin-sidebar-title i {
+    margin-right: 10px;
+    color: var(--green-color);
+}
+
+
+.admin-dashboard-list {
+    padding: 5px;
+}
+
+.admin-sidebar-link {
+    color: var(--secondary-color);
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    cursor: pointer;
+    display: block;
+    transition: .5s;
+}
+
+.admin-sidebar-link:hover {
+    color: var(--blue-color);
+}
+
+.admin-sidebar-link i {
+    margin-right: 10px;
+    color: var(--gray-color);
+    font-size: 25px;
+}
+
+/* Admin Main  */
+.admin-main {
+    flex: 10;
+    padding: 15px;
+}
+
+.admin-main-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 35px;
+    border-bottom: 2px solid var(--dark-color);
+}
+
+
+.admin-main-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(to right, #666, #999, #ccc);
+    margin: 10px;
+    display: inline-block;
+    width: calc(33.33% - 20px); /* توزيع البطاقات على الصفحة */
+    box-sizing: border-box;
+    transition: 1s;
+}
+
+.admin-main-card:hover {
+    background: linear-gradient(to right, #ccc, #999, #666);
+}
+
+.admin-card-title {
+    font-size: 1.5rem;
+    margin: 0;
+    color: var(--primary-color);
+}
+
+.admin-card-count {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 10px;
+    color: var(--pumpkin-color);
+}
+
+.admin-card-link-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.admin-card-link {
+    text-decoration: none;
+    color: var(--dark-color);
+    font-weight: bold;
+    transition: color 0.3s;
+    font-size: 20px;
+}
+
+.admin-card-link:hover {
+    color: var(--blue-color);
+}
+
+.admin-card-icon {
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+/*Add Category Form*/
+
+.add-category {
+    background: linear-gradient(to right, #ccc, #999, #666);
+    margin: 10px auto;
+    margin-top: 20px;
+    width: 700px;
+    border: 2px solid var(--gray-color);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.add-category-title {
+    font-size: 25px;
+    font-weight: 900;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.add-category-form-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.add-category-form-group label {
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    color: var(--dark-color);
+}
+
+.add-category-form-group input {
+    padding: 7px;
+    margin-bottom: 5px;
+    border: none; outline: none;
+    border-radius: 10px;
+    background-color: transparent;
+    border-bottom: 5px solid var(--dark-color);
+    color: var(--white-color);
+    font-size: 20px;
+}
+
+.add-category-btn {
+    background-color: var(--primary-color); 
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    color: var(--white-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.add-category-btn:hover {
+    background-color: var(--dark-color); 
+    color: #f0f0f0; 
+}
+
+
+/* Media Queries  */
+
+@media (max-width: 1200px) {
+    .add-main-card {
+        width: 44%;
+    }
+}
+
+@media (max-width: 990px) {
+    .add-category {
+        width: 100%;
+    }
+
+    .admin-sidebar{
+        display: none;
+        margin: 0;
+    }
+    .admin-main-card {
+        width: 100%;
+    }
+}
+

@@ -1,0 +1,79 @@
+.category {
+    min-width: calc(100vh - 130px);
+    padding: 20px;
+}
+
+.category-title {
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+
+.category-title span {
+    color: var(--gray-color);
+    font-size: 33px;
+    border-bottom: 4px solid var(--green-sea-color);
+}
+
+.category-not-found {
+    font-size: 35px;
+    margin: 20px 0;
+    color: var(--dark-color);
+}
+
+.category-not-found span {
+    color: var(--red-color);
+}
+
+.category-not-found-link  {
+    font-size: 30px;
+    text-decoration: underline;
+    font-weight: 700;
+}
+
+@media (max-width: 720px) {
+    .category {
+        min-width: calc(100vh - 130px);
+        padding: 10px; /* تقليل التباعد الداخلي للعنصر */
+    }
+
+    .category-title {
+        font-size: 24px; /* تقليل حجم الخط */
+    }
+
+    .category-title span {
+        font-size: 26px; /* تقليل حجم الخط */
+    }
+
+    .category-not-found {
+        font-size: 28px; /* تقليل حجم الخط */
+        margin: 10px 0; /* تقليل التباعد الخارجي للعنصر */
+    }
+
+    .category-not-found-link  {
+        font-size: 24px; /* تقليل حجم الخط */
+    }
+}
+
+@media (max-width: 520px) {
+    .category {
+        min-width: 100%; /* استغلال العرض الكامل */
+    }
+
+    .category-title {
+        font-size: 24px; /* تصغير حجم العنوان */
+    }
+
+    .category-title span {
+        font-size: 26px; /* تصغير حجم الجزء المظلل من العنوان */
+    }
+
+    .category-not-found {
+        font-size: 28px; /* تصغير حجم الرسالة في حالة عدم وجود الفئة */
+    }
+
+    .category-not-found-link {
+        font-size: 26px; /* تصغير حجم الرابط في حالة عدم وجود الفئة */
+    }
+}
+
+
